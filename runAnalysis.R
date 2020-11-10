@@ -450,6 +450,8 @@ promedio <- sqldf("select subject,desc, mean_data,
             from total
             group by subject, desc")
 
+#Deleting Big files
+
 unlink("./HAR",recursive = TRUE, force = FALSE, expand = TRUE)
 unlink("./Dataset.zip")
 
