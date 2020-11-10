@@ -450,14 +450,19 @@ promedio <- sqldf("select subject,desc, mean_data,
             from total
             group by subject, desc")
 
+unlink("./HAR",recursive = TRUE, force = FALSE, expand = TRUE)
+unlink("./Dataset.zip")
+
+
+
 #43. Create a txt file named tidyData2 with average results
-write.table(promedio,file = "./HAR/UCI HAR Dataset/tidyData2.txt",row.names = FALSE)
+write.table(promedio,file = "./tidyData2.txt",row.names = FALSE)
 
 #44. Clean Global enviroment data
-rm(list= c("activity_labels","training","training_set","dat_tBodyAccX","dat_tBodyAccY","dat_tBodyAccZ","dat_tBodyGyroX",
-           "dat_tBodyGyroY","dat_tBodyGyroZ","dat_TotalBodyAccX","dat_TotalBodyAccY","dat_TotalBodyAccZ",
-           "dataset","df","df1","df2","etiquetas","labels","promedio","subject_train",
-           "tBodyAccX","tBodyAccY","tBodyAccZ","tBodyGyroX","tBodyGyroY","tBodyGyroZ",
-           "test","test1","test2","TotalBodyAccX","TotalBodyAccY","TotalBodyAccZ"))
+# rm(list= c("activity_labels","training","training_set","dat_tBodyAccX","dat_tBodyAccY","dat_tBodyAccZ","dat_tBodyGyroX",
+#            "dat_tBodyGyroY","dat_tBodyGyroZ","dat_TotalBodyAccX","dat_TotalBodyAccY","dat_TotalBodyAccZ",
+#            "dataset","df","df1","df2","etiquetas","labels","promedio","subject_train",
+#            "tBodyAccX","tBodyAccY","tBodyAccZ","tBodyGyroX","tBodyGyroY","tBodyGyroZ",
+#            "test","test1","test2","TotalBodyAccX","TotalBodyAccY","TotalBodyAccZ"))
 
 
