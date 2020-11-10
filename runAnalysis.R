@@ -1,3 +1,9 @@
+#Project: Getting and Cleaning Data
+#Author: Gabriel General
+#Date: 10-11-2010
+
+
+
 #1. Import the library that we are going to use
 
 library(DBI)
